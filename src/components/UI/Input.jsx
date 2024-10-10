@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Input = ({ value, onChange, placeholder, type = "text", ...props }) => {
+export const Input = ({ value, onChange, type = "text", ...props }) => {
   return (
     <input
       type={type}
       value={value}
       onChange={onChange}
-      placeholder={placeholder}
       {...props}
       style={{
         padding: "20px",
@@ -15,8 +14,7 @@ const Input = ({ value, onChange, placeholder, type = "text", ...props }) => {
         borderRadius: "4px",
         width: "100%",
       }}
+      
     />
   );
 };
-
-export default Input
