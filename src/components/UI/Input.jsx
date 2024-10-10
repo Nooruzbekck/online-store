@@ -14,7 +14,6 @@ export const Input = ({ value, onChange, type = "text", ...props }) => {
         borderRadius: "4px",
         width: "100%",
       }}
-      
     />
   );
 };
