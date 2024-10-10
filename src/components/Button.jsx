@@ -17,5 +17,5 @@ const StyledButton = styled.button`
   font-weight: 500;
 
   background: #000000;
-  color: white;
+  color: #fff;
 `;
