@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Button = () => {
-  return <StyledButton>Add To Cart</StyledButton>;
+export const Button = ({ onClick, type, disabled, children, ...props }) => {
+  return (
+    <StyledButton type={type} onClick={onClick} {...props} disabled={disabled}>
+      {children}
+    </StyledButton>
+  );
 };
 
 const StyledButton = styled.button`
