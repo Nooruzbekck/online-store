@@ -12,7 +12,7 @@ export const Input = ({ value, onChange, type = "text", ...props }) => {
         margin: "10px 0",
         border: "2px solid #ccc",
         borderRadius: "4px",
-        width: "100%",
+        width:"100%"
       }}
     />
   );
