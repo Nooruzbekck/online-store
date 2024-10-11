@@ -1,19 +1,33 @@
 import React from "react";
+import styled from "styled-components";
 
-export const Input = ({ value, onChange, type = "text", ...props }) => {
+export const Input = ({
+  value,
+  onChange,
+  placeholder,
+  type = "text",
+  ...props
+}) => {
   return (
-    <input
+    <StyledInput
       type={type}
       value={value}
       onChange={onChange}
+      placeholder={placeholder}
       {...props}
-      style={{
-        padding: "20px",
-        margin: "10px 0",
-        border: "2px solid #ccc",
-        borderRadius: "4px",
-        width: "100%"
-      }}
     />
   );
 };
+
+const StyledInput = styled.input`
+  background-color: white;
+  width: 500px;
+  border-radius: 10px;
+  width: Fill (408px) px;
+  height: Hug (48px) px;
+  padding: 12px 16px 12px 16px;
+  gap: 12px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+`;
