@@ -84,7 +84,7 @@ const StyleBtnWomen = styled.button`
   width: 13%;
   height: 7%;
   border: none;
-  /* font-size: 1.2rem; */
+ 
 `;
 
 const StyleTwo = styled.div`

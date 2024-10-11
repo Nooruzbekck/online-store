@@ -1,5 +1,8 @@
-const App = () => {
-  return <div></div>;
-};
+import MainPage from "./pages/MainPage";
 
-export default App;
+
+export const App = () => {
+  return <div>
+    <MainPage/>
+  </div>;
+};
