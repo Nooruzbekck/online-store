@@ -1,11 +1,3 @@
-import { Input } from "./components/UI/input";
-
-const App = () => {
-  return (
-    <div>
-      <Input />
-    </div>
-  );
+export const App = () => {
+  return <div></div>;
 };
-
-export default App;
