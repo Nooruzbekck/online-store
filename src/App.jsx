@@ -1,3 +1,9 @@
-export function App() {
-  return <div></div>;
-}
+import { FotoSlider } from "./components/Slider";
+
+export const App = () => {
+  return (
+    <div>
+      <FotoSlider />
+    </div>
+  );
+};
