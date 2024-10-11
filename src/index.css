@@ -1,1 +1,32 @@
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("./assets/fonts/cabinet-grotesk/CabinetGrotesk-Bold.otf");
+}
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabinet Grotesk";
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+svg {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
