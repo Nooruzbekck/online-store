@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import FacebookIcon from "../"
+import { Icons } from "../assets";
+// import Basket  from "../assets/icons/basket-icons.svg";
 
 export const Footer = () => {
   return (
@@ -10,13 +11,23 @@ export const Footer = () => {
           <div className="style">
             <h3>Adress:</h3>
             <a>USA, Colifornia</a>
+            
           </div>
           <div className="style">
             <h3>Contact:</h3>
             <a href="#">1800 123 4567</a>
             <a href="#">javaria.y2b@gmail.com</a>
           </div>
-          <div className="icons">icons</div>
+      
+
+          <div className="icons">
+          <Icons.Facebook/>
+          <Icons.Instagram/>
+          <Icons.Starlink/>
+          <Icons.Inkeding/>
+          <Icons.Youtybe/>
+
+             </div>
         </div>
         <div className="box">
           <div className="display">
@@ -59,6 +70,11 @@ const StyledFooter = styled.footer`
     align-items: start;
     justify-content: space-between;
     padding: 70px 80px 0 80px;
+  }
+  .icons{
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
   .crete_line {
     width: 1130px;

@@ -1,5 +1,9 @@
 import { Footer } from "./layout/Footer";
 
-export function App() {
-  return <Footer/>
-}
+
+
+export const App = () => {
+  return <div>
+    <Footer />
+  </div>;
+};
