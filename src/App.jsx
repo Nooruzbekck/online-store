@@ -5,8 +5,6 @@ export function App() {
     <Header/>
   </div>;
 }
-const App = () => {
-  return <div></div>;
-};
+
 
 export default App;
