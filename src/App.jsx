@@ -1,8 +1,4 @@
-import MainPage from "./pages/MainPage";
+export function App() {
+  return <div></div>;
+}
 
-
-export const App = () => {
-  return <div>
-    <MainPage/>
-  </div>;
-};
