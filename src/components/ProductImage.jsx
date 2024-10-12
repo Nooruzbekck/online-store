@@ -57,15 +57,16 @@ const StyledFive = styled.img`
 
 const StyleButtonOne = styled.button`
   position: absolute;
-  margin-top: 20%;
+  margin-top: 381px;
   z-index: 2;
   color: #fff;
   background-color: black;
-  width: 13%;
-  height: 7%;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 5%;
   display: block;
   border: none;
+  padding: 16px 28px;
 `;
 
 const StyledDiv = styled.div``;
@@ -77,12 +78,14 @@ const StyleBtn = styled.div`
 
 const StyleBtnWomen = styled.button`
   position: absolute;
-  margin-top: 25%;
   z-index: 2;
   color: #fff;
+  font-size: 18px;
   background-color: black;
-  width: 13%;
-  height: 7%;
+  padding: 16px 28px;
+  font-weight: 700;
+  letter-spacing: 5%;
+  margin-top: 428px;
   border: none;
  
 `;
@@ -95,39 +98,39 @@ const StyleTwo = styled.div`
 
 const StyledThreeBtn = styled.button`
   position: absolute;
-  margin-top: 25%;
   z-index: 2;
   color: #fff;
   background-color: black;
-  width: 13%;
-  height: 7%;
-  /* font-size: 20px; */
-  margin-left: 14%;
+  font-size: 18px;
+  padding: 16px 28px;
+  font-weight: 700;
+  letter-spacing: 5%;
+  margin: 428px 198px 60px 199px;
   border: none;
 `;
 
 const StyledBoots = styled.button`
   position: absolute;
-  margin-top: 30%;
   z-index: 2;
   color: black;
   background-color: white;
-  width: 13%;
-  height: 7%;
-  /* font-size: 20px; */
-  margin-left: 12%;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 5%;
+  padding: 16px 28px;
+  margin: 428px 216px 60px 215px; 
   border: none;
 `;
 
 const StyledMen = styled.button`
   position: absolute;
-  margin-top: 28.3%;
   z-index: 2;
   color: black;
   background-color: white;
-  width: 13%;
-  height: 7%;
-  /* font-size: 20px; */
-  margin-left: 22%;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 5%;
+  padding: 16px 28px;
+  margin: 428px 395px 60px 394px;
   border: none;
 `;

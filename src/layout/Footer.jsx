@@ -45,11 +45,11 @@ export const Footer = () => {
             <a href="">Link five</a>
           </div>
           <div className="display">
-            <a href="">Link one </a>
-            <a href="">Link two</a>
-            <a href="">Link three</a>
-            <a href="">Link four</a>
-            <a href="">Link five</a>
+            <a href="">Link six </a>
+            <a href="">Link seven</a>
+            <a href="">Link eight</a>
+            <a href="">Link nine</a>
+            <a href="">Link ten</a>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   width: 100%;
   background-color: #333333;
-  height: 100vh;
+  height: 70vh;
   .wrapper {
     display: flex;
     align-items: start;
@@ -92,6 +92,9 @@ const StyledFooter = styled.footer`
     flex-direction: column;
     justify-content: center;
     gap: 15px;
+    > a {
+      font-weight: 500;
+    }
   }
   .box {
     display: flex;
@@ -109,11 +112,16 @@ const StyledFooter = styled.footer`
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    > a {
+      text-decoration: underline;
+    }
   }
   h3 {
     color: white;
     margin-bottom: 20px;
     margin-top: 10px;
+    font-weight: 700;
   }
   h1 {
     color: white;

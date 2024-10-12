@@ -1,4 +1,8 @@
+import MainPage from "./pages/MainPage";
+
 export function App() {
-  return <div></div>;
+  return <div>
+    <MainPage/>
+  </div>;
 }
 
