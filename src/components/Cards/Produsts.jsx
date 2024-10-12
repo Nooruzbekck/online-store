@@ -10,5 +10,5 @@ export const Produsts = () => {
   );
 };
 const StyledDiv = styled.div`
-  padding: 43px;
+  padding: 45px;
 `;
