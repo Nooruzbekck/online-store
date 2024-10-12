@@ -3,7 +3,7 @@ import Second from "../assets/image/CrossTwo.png";
 import Boots from "../assets/image/CrossThree.png";
 import Cross from "../assets/image/CrossFour.png";
 import Starr from "../assets/image/Starss.png";
-export const products = [
+export const PRODUCTS = [
   {
     id: 1,
     image: Second,

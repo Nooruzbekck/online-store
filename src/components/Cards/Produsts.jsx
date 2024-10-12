@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { products } from "./products";
+import { PRODUCTS } from "./products";
 import { ProdustsList } from "./ProdustsList";
 
 export const Produsts = () => {
   return (
     <StyledDiv>
-      <ProdustsList produstsCard={products} />
+      <ProdustsList produstsCard={PRODUCTS} />
     </StyledDiv>
   );
 };
