@@ -2,7 +2,7 @@ import First from "../assets/image/CrossOne.png";
 import Second from "../assets/image/CrossTwo.png";
 import Boots from "../assets/image/CrossThree.png";
 import Cross from "../assets/image/CrossFour.png";
-import Starr from "../assets/image/Starss.png";
+import Starr from "../assets/image/Star.png";
 export const PRODUCTS = [
   {
     id: 1,
