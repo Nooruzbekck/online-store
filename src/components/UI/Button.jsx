@@ -10,7 +10,7 @@ export const Button = ({ onClick, type, disabled, children, ...props }) => {
 };
 
 const StyledButton = styled.button`
-  width: 270px;
+  width: 300px;
   height: 41px;
 
   font-size: 16px;
