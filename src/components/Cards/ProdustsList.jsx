@@ -8,7 +8,7 @@ export const ProdustsList = ({ produstsCard }) => {
       {produstsCard.map((item) => (
         <ProdustsItem
           key={item.id}
-          image={item.image}
+          image={item.image} 
           name={item.name}
           rating={item.rating}
           price={item.price}
@@ -16,11 +16,15 @@ export const ProdustsList = ({ produstsCard }) => {
         />
       ))}
     </StyledUl>
+
+    
   );
 };
 
 const StyledUl = styled.ul`
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 60px;
+  margin-left: 79PX;
 `;

@@ -1,34 +1,63 @@
 import React from "react";
 import styled from "styled-components";
+import { Button } from "../UI/Button";
+import FavoriteIcon from "../../assets/icons/favorite-isons.svg?react"
 
-export const ProdustsItem = ({ image, name, rating, price, count }) => {
+export const ProdustsItem = ({ image, name, rating, price, count, showCart}) => {
   return (
     <StyledLi>
       <StyledDiv>
-        <StyledImg src={image} alt="" />
+        <StyledImg src={image} alt="" />      
       </StyledDiv>
-      <StyledName>{name}</StyledName>
-      <StyledTag>${price}</StyledTag>
-      <StyledCountDiv>
-        <div>
-          <StyledContainerRating src={rating} alt="" />
-          <StyledContainerRating src={rating} alt="" />
-          <StyledContainerRating src={rating} alt="" />
-          <StyledContainerRating src={rating} alt="" />
-          <StyledContainerRating src={rating} alt="" />
-        </div>
-        <StyledTag>{count}</StyledTag>
-      </StyledCountDiv>
+
+      <StyledDateDiv>
+        <StyledName>{name}</StyledName>
+        <StyledTag>${price}</StyledTag>
+
+        <StyledCountDiv>
+          <div>
+            <StyledContainerRating src={rating} alt="" />
+            <StyledContainerRating src={rating} alt="" />
+            <StyledContainerRating src={rating} alt="" />
+            <StyledContainerRating src={rating} alt="" />
+            <StyledContainerRating src={rating} alt="" />
+          </div>
+
+          <StyledTag>{count}</StyledTag>
+        </StyledCountDiv>
+      </StyledDateDiv>
+
+      <StyledButtonWrapper>
+        <Button>Add To Cart</Button>
+      </StyledButtonWrapper>
     </StyledLi>
   );
 };
 
+const StyledButtonWrapper = styled.div`
+  position: absolute;
+  margin-top: 252px;
+  z-index: 2;
+`;
+
 const StyledLi = styled.li`
-  width: 400px;
+  width: 270px;
   height: 400px;
   list-style: none;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
+
+  &:hover ${StyledButtonWrapper} {
+    opacity: 1;
+    transform: translateY(0); /* Поднимаем кнопку */
+    z-index: 2;
+  }
+`;
+
+
+const StyledDateDiv = styled.div`
+  margin-top: 16px;
 `;
 
 const StyledTag = styled.p`
@@ -44,13 +73,14 @@ const StyledDiv = styled.div`
 `;
 
 const StyledImg = styled.img`
-  width: 300px;
-  height: 280px;
+  width: 270px;
+  height: 250px;
   background-size: contain;
 `;
 const StyledName = styled.p`
   font-size: 20px;
   font-weight: 500;
+  margin-bottom: 10px;
 `;
 const StyledContainerRating = styled.img`
   width: 20px;
@@ -61,4 +91,5 @@ const StyledCountDiv = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 8px;
+  margin-top: 10px;
 `;
