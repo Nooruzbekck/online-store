@@ -1,5 +1,3 @@
-export function App() {
-  return <div>
-  </div>;
-}
-
+export const App = () => {
+  return <div></div>;
+};
