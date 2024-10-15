@@ -6,7 +6,6 @@ const MainPage = () => {
   return (
     <div>
       <FotoSlider />
-      <Produsts showButton={true}></Produsts>
       <Produsts
         showLine={true}
         showTitle={true}

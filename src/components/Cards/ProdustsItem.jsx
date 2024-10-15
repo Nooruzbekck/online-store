@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Button } from "../UI/Button";
-import FavoriteIcon from "../../assets/icons/favorite-isons.svg?react"
-
-export const ProdustsItem = ({ image, name, rating, price, count, showCart}) => {
+import { Icons } from "../../assets";
+export const ProdustsItem = ({
+  image,
+  name,
+  rating,
+  id,
+  price,
+  count,
+  onAddToCart,
+  quantity,
+  handleFavourite,
+  isFavourite,
+}) => {
   return (
     <StyledLi>
       <StyledDiv>
-        <StyledImg src={image} alt="" />      
+        <StyledImg src={image} alt="" />
+
+        {isFavourite ? (
+          <ImageFavourite
+            src="https://i.pinimg.com/736x/55/55/55/5555556a6989a5d12c0ef128b406fa00.jpg"
+            alt=""
+            width={30}
+            onClick={() => handleFavourite(id)}
+          />
+        ) : (
+          <IconFavorite onClick={() => handleFavourite(id)} />
+        )}
+
+        {quantity && <Quantity>{quantity} x</Quantity>}
       </StyledDiv>
 
       <StyledDateDiv>
@@ -27,9 +50,11 @@ export const ProdustsItem = ({ image, name, rating, price, count, showCart}) => 
         </StyledCountDiv>
       </StyledDateDiv>
 
-      <StyledButtonWrapper>
-        <Button>Add To Cart</Button>
-      </StyledButtonWrapper>
+      {quantity ? null : (
+        <StyledButtonWrapper>
+          <Button onClick={onAddToCart}>Add To Cart</Button>
+        </StyledButtonWrapper>
+      )}
     </StyledLi>
   );
 };
@@ -38,8 +63,27 @@ const StyledButtonWrapper = styled.div`
   position: absolute;
   margin-top: 252px;
   z-index: 2;
+  > button {
+    width: 300px;
+  }
+`;
+const IconFavorite = styled(Icons.Favorite)`
+  position: absolute;
+  z-index: 19;
+  right: 20px;
+`;
+const Quantity = styled.h3`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  top: 20px;
 `;
 
+const ImageFavourite = styled.img`
+  position: absolute;
+  z-index: 19;
+  right: 20px;
+`;
 const StyledLi = styled.li`
   width: 270px;
   height: 400px;
@@ -55,7 +99,6 @@ const StyledLi = styled.li`
   }
 `;
 
-
 const StyledDateDiv = styled.div`
   margin-top: 16px;
 `;
@@ -70,6 +113,7 @@ const StyledDiv = styled.div`
   height: 300px;
   background-color: #e9e9eb;
   border-radius: 4px;
+  position: relative;
 `;
 
 const StyledImg = styled.img`
