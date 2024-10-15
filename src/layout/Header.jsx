@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import HeaderIcon from "../assets/icons/head-icons.svg?react";
 import FavoriteIcon from "../assets/icons/favorite-isons.svg?react";
 import BasketIcon from "../assets/icons/basket-icons.svg?react";
 import ContactIcon from "../assets/icons/contact-icons.svg?react";
+import { RouteContext } from "../context/RouteContext";
 
 const Header = () => {
+  const { onPathChange } = useContext(RouteContext);
   return (
     <StyledHeader>
       <StyledNavDiv>
-        <HeaderIcon />
+        <HeaderIcon onClick={() => onPathChange("/")} />
         <StyledNav>
           <StyledTagA href="#">Women</StyledTagA>
           <StyledTagA href="#">Men</StyledTagA>
@@ -21,8 +23,8 @@ const Header = () => {
       </StyledNavDiv>
 
       <StyledIconsDiv>
-        <FavoriteIcon />
-        <BasketIcon />
+        <FavoriteIcon onClick={() => onPathChange("favorite")} />
+        <BasketIcon onClick={() => onPathChange("cart")} />
         <ContactIcon />
       </StyledIconsDiv>
     </StyledHeader>
@@ -33,14 +35,16 @@ export default Header;
 
 const StyledHeader = styled.header`
   background-color: #fff;
-  width: 95%;
-  margin-top: 3px;
-  margin-left: 34px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 100%;
+  padding: 20px 40px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 `;
 
 const StyledNavDiv = styled.div`

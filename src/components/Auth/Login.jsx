@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import { Input } from "../UI/Input";
-import { Button } from "../UI/Button";
+import { RouteContext } from "../../context/RouteContext";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { onPathChange } = useContext(RouteContext);
 
-  const passwordPattern =
-    /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}$/;
+  const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
 
   const handleEmail = (event) => {
     setEmail(event.target.value);
@@ -34,6 +33,7 @@ const Login = () => {
     };
 
     localStorage.setItem("user", JSON.stringify(userData));
+    onPathChange("/");
     setEmail("");
     setPassword("");
     setError("");
