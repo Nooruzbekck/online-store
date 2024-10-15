@@ -11,6 +11,7 @@ export const PRODUCTS = [
     price: 160,
     rating: Starr,
     count: "(88)",
+    isFavourite: false,
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ export const PRODUCTS = [
     price: 160,
     rating: Starr,
     count: "(88)",
+    isFavourite: false,
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ export const PRODUCTS = [
     price: 160,
     rating: Starr,
     count: "(88)",
+    isFavourite: false,
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ export const PRODUCTS = [
     price: 160,
     rating: Starr,
     count: "(75)",
+    isFavourite: false,
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ export const PRODUCTS = [
     price: 160,
     rating: Starr,
     count: "(88)",
+    isFavourite: false,
   },
   {
     id: 6,
@@ -51,6 +56,7 @@ export const PRODUCTS = [
     price: 160,
     rating: Starr,
     count: "(75)",
+    isFavourite: false,
   },
   {
     id: 7,
@@ -59,6 +65,7 @@ export const PRODUCTS = [
     price: 160,
     rating: Starr,
     count: "(88)",
+    isFavourite: false,
   },
   {
     id: 8,
@@ -67,5 +74,6 @@ export const PRODUCTS = [
     price: 160,
     rating: Starr,
     count: "(75)",
+    isFavourite: false,
   },
 ];

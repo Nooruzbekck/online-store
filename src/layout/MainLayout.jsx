@@ -10,7 +10,6 @@ import styled from "styled-components";
 
 export const MainLayout = () => {
   const { path } = useContext(RouteContext);
-
   let content;
 
   switch (path) {

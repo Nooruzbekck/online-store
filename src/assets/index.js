@@ -8,11 +8,9 @@ import Star from "./icons/star-icons.svg?react";
 import Youtybe from "./icons/youtube-icons.svg?react";
 import Inkeding from "./icons/inkedin-icons.svg?react";
 import Starlink from "./icons/starlink-icons.svg?react";
-import Instagram from "./icons/instagram-icons.svg?react"
-
+import Instagram from "./icons/instagram-icons.svg?react";
 
 export const Icons = {
- 
   Favorite,
   Basket,
   Contact,

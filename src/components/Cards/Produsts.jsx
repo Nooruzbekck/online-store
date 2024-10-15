@@ -3,13 +3,23 @@ import { PRODUCTS } from "./products";
 import { ProdustsList } from "./ProdustsList";
 import { Button3d } from "../UI/Button3d";
 import { Button } from "../UI/Button";
-import TitleIcon from "../../assets/icons/best-selling.svg?react"
+import TitleIcon from "../../assets/icons/best-selling.svg?react";
+import { useContext } from "react";
+import { ProductContext } from "../../context/ProductContext";
 
-export const Produsts = ({ showButton, showSellingButton, showLine, showTitle }) => {
+export const Produsts = ({
+  showButton,
+  showSellingButton,
+  showLine,
+  showTitle,
+}) => {
+  const { products } = useContext(ProductContext);
   return (
     <StyledDiv>
       {showLine && <StyledLineDiv> </StyledLineDiv>}
-      {showTitle && <TitleIcon style={{marginLeft: "78px", marginBottom: "85px"}}/>}
+      {showTitle && (
+        <TitleIcon style={{ marginLeft: "78px", marginBottom: "85px" }} />
+      )}
 
       {showButton && (
         <StyledButtonsDiv>
@@ -18,7 +28,7 @@ export const Produsts = ({ showButton, showSellingButton, showLine, showTitle })
         </StyledButtonsDiv>
       )}
 
-      <ProdustsList produstsCard={PRODUCTS} />
+      <ProdustsList produstsCard={products} />
 
       {showSellingButton && (
         <StyledButton>
@@ -55,4 +65,4 @@ const StyledButton = styled.div`
 
 const StyledTagH1 = styled.h1`
   font-family: "Geist";
-`
+`;
